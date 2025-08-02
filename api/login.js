@@ -1,5 +1,3 @@
-// api/login.js
-
 export default function handler(req, res) {
   // Cek apakah request menggunakan metode POST
   if (req.method === 'POST') {

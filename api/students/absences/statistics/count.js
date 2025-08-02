@@ -1,0 +1,12 @@
+export default function handler(req, res) {
+  // Jika method selain POST, kirimkan error 405
+  return res.status(200).json(
+    {
+      "messages": "Your custom message here",
+      "data": {
+        "count": 100,
+        "compare_ratio": 0.75
+      }
+    }
+  );
+}
