@@ -6,7 +6,7 @@ export default function handler(req, res) {
         "messages": "Your custom message here",
         "data": {
           "count": 100,
-          "compare_ratio": 0.75
+          "percentage_change": 0.75
         }
       }
     );
