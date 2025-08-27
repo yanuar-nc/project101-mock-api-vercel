@@ -1,0 +1,16 @@
+{
+  "name": "mock-api-vercel",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "vercel dev --listen 5000"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true,
+  "description": "A mock API for Vercel deployments",
+  "author": "Medusa Team",
+  "license": "MIT"
+}
