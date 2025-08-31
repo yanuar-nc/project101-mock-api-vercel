@@ -1,4 +1,14 @@
 export default function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  // Handle preflight OPTIONS request
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   // Cek apakah request menggunakan metode POST
   if (req.method === 'POST') {
     const { 
@@ -16,7 +26,7 @@ export default function handler(req, res) {
     }
 
     // Simulasi login dengan credentials yang benar
-    if (organization_username === 'demo' && username === 'admin' && password === 'password123') {
+    if (organization_username === 'tridharma' && username === 'admin' && password === 'password123') {
       // Hitung waktu kedaluwarsa token berdasarkan remember_me
       const expiryDays = remember_me ? 7 : 1;
       const expiryDate = new Date();
